@@ -52,7 +52,6 @@ def edit_contact(contacts, phone, new_name, new_email)
   puts "Contact updated successfully!"
 end
 
-# Search contacts using precomputed values (O(1) substring search)
 def search_contacts(contacts, query)
   query = query.downcase
   results = contacts.select { |phone, details| details["search_key"].include?(query) || phone.include?(query) }
